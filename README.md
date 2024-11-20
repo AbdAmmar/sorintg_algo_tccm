@@ -54,4 +54,5 @@ Once compiled, run the executables generated in the directory. For example:
 
 ## **License**
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 © 2024 Abdallah Ammar

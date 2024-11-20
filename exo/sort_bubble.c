@@ -20,15 +20,13 @@ void bubbleSort(int arr[], int n) {
         bool is_sorted = true;
 
         // Inner loop to compare adjacent elements
-        // TODO: set the correct conditions on j to traverse the array up to the unsorted part
-        //for (int j = ??; j < ??; j++) {
+        for (int j = 0; j < n - 1 - i; j++) {
 
             // Compare adjacent elements and swap if they are in the wrong order
             if (arr[j] > arr[j + 1]) {
 
                 // Swap the elements
-                // TODO: Call the swap function with the correct indices
-                //swap(arr, ??, ??);
+                swap(arr, j, j + 1);
 
                 // We did some swap, so we aren't done yet
                 is_sorted = false;

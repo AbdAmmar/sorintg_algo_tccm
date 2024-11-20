@@ -16,6 +16,7 @@ git clone https://github.com/AbdAmmar/sorintg_algo_tccm.git
 ### 2. **Navigate to the Codes Directory**
 Once cloned, navigate to the directory containing the code:
 ```bash
+sorintg_algo_tccm/
 cd exo
 ```
 

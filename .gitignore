@@ -1,0 +1,8 @@
+
+exo/*.o
+exo/sort_bubble
+exo/sort_merge
+exo/sort_quick
+exo/sort_radix
+exo/overlap
+

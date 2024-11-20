@@ -3,6 +3,7 @@
 #include <stdbool.h> 
 #include "utils.h"
 
+
 // Function to sort the array using Bubble Sort
 void bubbleSort(int arr[], int n) {
 
@@ -12,30 +13,31 @@ void bubbleSort(int arr[], int n) {
         and swaps them if they are in the wrong order.
     */
 
+    // Outer loop to traverse through the array multiple times
     for (int i = 0; i < n - 1; i++) {
 
         // Assume the array is sorted before the inner loop
         bool is_sorted = true;
 
-        // TODO
+        // Inner loop to compare adjacent elements
+        // TODO: set the correct conditions on j to traverse the array up to the unsorted part
         //for (int j = ??; j < ??; j++) {
 
-            // Swap if need
+            // Compare adjacent elements and swap if they are in the wrong order
+            if (arr[j] > arr[j + 1]) {
 
-            // TODO
-            //if (?? > ??) {
-
-                // TODO
+                // Swap the elements
+                // TODO: Call the swap function with the correct indices
                 //swap(arr, ??, ??);
 
-                // we did some swap, so we aren't done yet
+                // We did some swap, so we aren't done yet
                 is_sorted = false;
             }
         }
 
+        // If no swaps were made in the inner loop, the array is sorted
         if (is_sorted) return;
     }
-
 }
 
 

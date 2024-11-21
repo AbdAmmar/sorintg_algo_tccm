@@ -33,13 +33,16 @@ void merge(int arr[], int left, int mid, int right) {
         rightArr[i] = arr[mid + 1 + i];
     }
 
-    // Merge the temporary arrays back into the original array
-    int i = 0, j = 0, k = left;
+    // Initial indices of the subarrays
+    int i = 0; // Initial index of left subarray
+    int j = 0; // Initial index of right subarray
+    int k = left; // Initial index of merged subarray
 
-    // TODO
+    // Merge the temporary arrays back into arr[left..right]
+    // TODO: Replace ?? with appropriate conditions
     //while ((i < ??) && (j < ??)) {
 
-        // TODO
+        // TODO: Replace ?? with the correct comparison
         //if (?? <= ??) {
 
             arr[k] = leftArr[i];

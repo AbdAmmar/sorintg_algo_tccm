@@ -2,52 +2,52 @@
 #include <stdlib.h>
 #include "utils.h"
 
-// Helper function to perform MSD radix sort recursively
+// Helper function to perform MSD (Most Significant Digit) radix sort recursively
 void msdRadixSort(int arr[], int n, int exp) {
 
-    // To stop recursion
+    // if the array size is less than 2 or all bits are processed, stop recursion
     if (n < 2 || exp < 0) return;
 
-    // Temporary array to store elements
+    // Temporary arrays to store the elements for 0 and 1 bits
     int* tmp[2];
-    tmp[0] = (int*) malloc(n*2 * sizeof(int));
-    tmp[1] = tmp[0] + n;
+    tmp[0] = (int*) malloc(n * 2 * sizeof(int)); // Allocate memory for both arrays in one go
+    tmp[1] = tmp[0] + n; // Second array starts after the first
 
     if (tmp[0] == NULL) {
         printf("Memory allocation failed!\n");
         exit(1);
     }
 
-    // since base is 2, we need a count array of size 2
+    // Since the base is 2, we need a count array of size 2 to count 0s and 1s
     int count[2] = {0};
 
-    // create a mask by shifting 1 to the left by (exp-1) positions
-    // TODO
-    // int mask = ?? 
+    // Create a mask by shifting 1 to the left by 'exp' positions
+    // TODO: Set the correct mask for the current bit
+    int mask = ??
 
-    // append arr elements to tmp[0] or tmp[1]
+    // Distribute elements into tmp[0] (for bit 0) and tmp[1] (for bit 1)
     for (int i = 0; i < n; i++) {
 
-        // Determine if first bit is 0 or 1
-        int first_bit = 0;
+        // Determine if the bit at position 'exp' is 0 or 1
+        int exp_bit = 0;
         if ((arr[i] & mask) != 0) {
-          first_bit = 1;
+            exp_bit = 1;
         }
 
-        // add arr[i] in tmp[0] array or tmp[1] array
-        tmp[first_bit][count[first_bit]] = arr[i];
-        count[first_bit]++;
+        // Add arr[i] to the corresponding tmp array
+        tmp[exp_bit][count[exp_bit]] = arr[i];
+        count[exp_bit]++;
     }
 
-    // Sort tmp[0] array according to the next bit
-    // TODO
-    //msdRadixSort(tmp[0], ??, exp-1);
+    // Recursively sort the tmp[0] array based on the next significant bit
+    // TODO: Replace ?? with the correct size
+    msdRadixSort(tmp[0], ??, exp - 1);
 
-    // Sort tmp[1] array according to the next bit
-    // TODO
-    //msdRadixSort(tmp[1], ??, exp-1);
+    // Recursively sort the tmp[1] array based on the next significant bit
+    // TODO: Replace ?? with the correct size
+    msdRadixSort(tmp[1], ??, exp - 1);
 
-    // Copy the sorted numbers into the original array
+    // Copy the sorted elements from tmp arrays back to the original array
     for (int i = 0; i < count[0]; i++) {
         arr[i] = tmp[0][i];
     }
@@ -55,6 +55,7 @@ void msdRadixSort(int arr[], int n, int exp) {
         arr[i] = tmp[1][i-count[0]];
     }
 
+    // Free the allocated memory for tmp arrays
     free(tmp[0]);
     tmp[0] = NULL;
 }
@@ -66,15 +67,15 @@ void radixSort(int arr[], int n) {
     /*
         Non-comparative integer sorting algorithm that sorts by 
         processing individual digits. It works by sorting the numbers 
-        bit by bit starting from the most significant bit to 
-        the least significant bit.
+        bit by bit starting from the most significant bit (MSD) to 
+        the least significant bit (LSD).
     */
 
     // Find the maximum number of bits in the largest number
     int maxBits = getMaxBits(arr, n);
 
-    // Function to perform MSD radix sort
-    msdRadixSort(arr, n, maxBits);
+    // Perform MSD radix sort starting from the most significant bit
+    msdRadixSort(arr, n, maxBits - 1); // maxBits - 1 for 0-based bit indexing
 
 }
 

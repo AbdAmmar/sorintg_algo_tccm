@@ -13,7 +13,7 @@ int partition(int arr[], int left, int right) {
     */
 
     // Choose the last element as pivot
-    // TODO: Replace ?? with the index of the pivot element (right)
+    // TODO: Replace ?? with the index of the pivot element
     int pivot = arr[??];
 
     // Index of the smaller element, initially set to one less than the starting index
@@ -23,7 +23,7 @@ int partition(int arr[], int left, int right) {
     for (int j = left; j < right; j++) {
 
         // If the current element is smaller than or equal to the pivot
-        // TODO: Replace ?? with the correct comparison element (arr[j])
+        // TODO: Replace ?? with the correct comparison element
         if (arr[??] <= pivot) {
 
             // Increment the index of the smaller element

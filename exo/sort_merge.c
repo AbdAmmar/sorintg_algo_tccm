@@ -66,7 +66,7 @@ void merge(int arr[], int left, int mid, int right) {
     }
 
     // Copy the remaining elements of rightArr[], if any
-    // TODO
+    // TODO: Replace ?? with appropriate conditions
     //while (?? < ??) {
         arr[k] = rightArr[j];
         j++;

@@ -40,10 +40,10 @@ void merge(int arr[], int left, int mid, int right) {
 
     // Merge the temporary arrays back into arr[left..right]
     // TODO: Replace ?? with appropriate conditions
-    //while ((i < ??) && (j < ??)) {
+    while ((i < ??) && (j < ??)) {
 
         // TODO: Replace ?? with the correct comparison
-        //if (?? <= ??) {
+        if (?? <= ??) {
 
             arr[k] = leftArr[i];
             i++;
@@ -67,7 +67,7 @@ void merge(int arr[], int left, int mid, int right) {
 
     // Copy the remaining elements of rightArr[], if any
     // TODO: Replace ?? with appropriate conditions
-    //while (?? < ??) {
+    while (?? < ??) {
         arr[k] = rightArr[j];
         j++;
         k++;

@@ -5,25 +5,38 @@
 // Function to partition the array for Quick Sort
 int partition(int arr[], int left, int right) {
 
-    // Choose the last element as pivot
-    // TODO
-    //int pivot = arr[??]; 
+    /*
+        This function takes the last element as pivot, places
+        the pivot element at its correct position in the sorted 
+        array, and places all smaller (smaller than pivot) to 
+        left of pivot and all greater elements to right of pivot.
+    */
 
-    // Index of the smaller element
+    // Choose the last element as pivot
+    // TODO: Replace ?? with the index of the pivot element (right)
+    int pivot = arr[??];
+
+    // Index of the smaller element, initially set to one less than the starting index
     int i = left - 1;
 
-    // Loop through the array and rearrange elements
+    // Loop through the array from the 'left' index to 'right - 1'
     for (int j = left; j < right; j++) {
-        // TODO
-        //if (arr[??] <= pivot) {
+
+        // If the current element is smaller than or equal to the pivot
+        // TODO: Replace ?? with the correct comparison element (arr[j])
+        if (arr[??] <= pivot) {
+
+            // Increment the index of the smaller element
             i++;
+
+            // Swap the current element with the element at index 'i'
             swap(arr, i, j);
         }
     }
-    
-    // Swap arr[i+1] and pivot element
-    // TODO
-    //swap(arr, i + 1, ??);
+
+    // Swap the pivot element with the element at index 'i + 1' to place it at the correct position
+    // TODO: Replace ?? with the correct index of the pivot element
+    swap(arr, i + 1, ??);
 
     // Return the partition index
     return i + 1;

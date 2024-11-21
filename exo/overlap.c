@@ -26,11 +26,9 @@ double naive_overlap(int N1, Psi* psi1, int N2, Psi* psi2) {
     double s = 0.0; // Initialize the overlap accumulator.
 
     // Iterate over all elements in the first wavefunction.
-    // TODO
-    for (int i = ??; i < ??; i++) {
+    for (int i = 0; i < N1; i++) {
         // For each element in the first wavefunction, iterate over all elements in the second wavefunctions.
-        // TODO
-        for (int j = ??; j < ??; j++) {
+        for (int j = 0; j < N2; j++) {
             // Check if the determinants of the current elements match.
             if (psi1[i].det == psi2[j].det) {
                 // If they match, accumulate the product of their coefficients.
@@ -68,13 +66,11 @@ double smart_overlap(int N1, Psi* psi1, int N2, Psi* psi2) {
         }
         // If the current determinant in the first set is smaller, move to the next element in the first set.
         else if (psi1[i].det < psi2[j].det) {
-            // TODO
-             ??++;
+            i++;
         }
         // If the current determinant in the second set is smaller, move to the next element in the second set.
         else {
-            // TODO
-            ??++;
+            j++;
         }
     }
 

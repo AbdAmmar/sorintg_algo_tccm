@@ -10,13 +10,13 @@ Students are required to complete the code where marked as `TODO` and then compi
 ### 1. Clone the Repository
 First, clone the repository to your local machine using the following command:
 ```bash
-git clone https://github.com/AbdAmmar/sorintg_algo_tccm.git
+git clone https://github.com/AbdAmmar/sorting_algo_tccm.git
 ```
 
 ### 2. **Navigate to the Codes Directory**
 Once cloned, navigate to the directory containing the code:
 ```bash
-cd sorintg_algo_tccm
+cd sorting_algo_tccm
 cd exo
 ```
 
